@@ -1,6 +1,7 @@
 {{ define "title" }}
   {{ .Title }} · {{ .Site.Title }}
 {{ end }}
+
 {{ define "content" }}
   <section class="container post">
     <article>
@@ -30,7 +31,21 @@
         {{ .Content }}
       </div>
 
+      <aside id="toc">
+        <div class="toc-title">{{ i18n "tableOfContents" }}</div>
+        {{.TableOfContents}}
+     </aside>
+
       <footer>
+        <script src="https://utteranc.es/client.js"
+          repo="jsonbruce/jsonbruce.github.io"
+          issue-term="og:title"
+          label="comment"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+        </script>
+
         {{ partial "posts/series" . }}
         {{ partial "posts/disqus" . }}
       </footer>
