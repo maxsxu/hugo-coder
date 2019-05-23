@@ -26,6 +26,9 @@ a {
   font-weight: 300;
   color: $link-color;
   text-decoration: none;
+	transition-property: color;
+  transition-duration: .4s;
+  transition-timing-function: ease-out;
   &:focus,
   &:hover {
     text-decoration: underline;
@@ -213,6 +216,14 @@ img {
   margin-bottom: .5em;
   font-size: .8em;
   font-weight: bold;
+}
+
+#TableOfContents a {
+	color: $fg-color;
+	&:hover,
+	&:focus {
+		color: $link-color
+	}
 }
 
 @media (min-width: 1300px) {
