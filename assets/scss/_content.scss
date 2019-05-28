@@ -169,6 +169,49 @@
   }
 }
 
+/** content - Table Of Contents **/
+
+#toc {
+  position: fixed;
+  left: 60%;
+  top: 0;
+  display: none;
+}
+
+.toc-title {
+  margin-left: 1em;
+  margin-bottom: .5em;
+  font-size: .8em;
+  font-weight: bold;
+}
+
+#TableOfContents a {
+	color: $fg-color;
+	&:hover,
+	&:focus {
+		color: $link-color
+	}
+}
+
+@media (min-width: 1300px) {
+  #toc {
+    display: block;
+    top: 13em;
+    margin-left: 370px;
+    max-width: 220px;
+  }
+}
+
+@media (min-width: 1800px) {
+  #toc {
+    top: 15em;
+    margin-left: 400px;
+    max-width: 300px;
+  }
+}
+
+/** footer - Comment Area **/
+
 .utterances {
   margin: 0;
 }

@@ -31,11 +31,6 @@
         {{ .Content }}
       </div>
 
-      <aside id="toc">
-        <div class="toc-title">{{ i18n "tableOfContents" }}</div>
-        {{.TableOfContents}}
-     </aside>
-
       <footer>
         <script src="https://utteranc.es/client.js"
           repo="jsonbruce/jsonbruce.github.io"
@@ -50,6 +45,11 @@
         {{ partial "posts/disqus" . }}
       </footer>
     </article>
+
+    <aside id="toc">
+      <div class="toc-title">{{ i18n "tableOfContents" }}</div>
+      {{.TableOfContents}}
+    </aside>
 
     {{ partial "posts/math" . }}
   </section>
