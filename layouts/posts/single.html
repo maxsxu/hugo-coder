@@ -32,7 +32,15 @@
       </div>
 
       <footer>
-        {{ partial "gitalk" . }}
+        <!-- {{ partial "gitalk" . }} -->
+        <script src="https://utteranc.es/client.js"
+          repo="maxsxu/maxsxu.github.io"
+          issue-term="og:title"
+          label="comment"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+        </script>
 
         {{ partial "posts/series" . }}
         {{ partial "posts/disqus" . }}
